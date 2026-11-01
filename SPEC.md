@@ -24,3 +24,14 @@ BrinicleID is designed to provide the following properties:
 - **Monotonicity:** Identifiers generated within a session follow a non-decreasing chronological order.
 - **Session-Level Uniqueness:** Every identifier generated within the same session is unique, including identifiers produced concurrently across multiple threads.
 - **Deterministic Parsability:** The 64-bit `BrinicleKey` stores generator metadata, allowing `BrinicleID`s to be easily and deterministically decoded.
+
+## 4. Non-Guarantees
+
+`BrinicleID` intentionally does not provide the following:
+
+- **Global Uniqueness:** Uniqueness is restricted to a single session. Identifiers generated in different sessions may overlap.
+- **Cross-Session Ordering:** Identifiers from different sessions have no defined chronological relationship and must not be compared for ordering.
+- **Cross-Session Stability:** An identifier has no independent meaning outside its originating session. Its interpretation depends on the associated session context.
+- **Adversarial Collision Resistance:**  Identifiers are deterministic and predictable by design.
+
+> Note: Read [README.md](README.md) for info about alternatives.
