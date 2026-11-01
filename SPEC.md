@@ -1,8 +1,6 @@
 # BrinicleID - Specification
 
-Version: 1.0
-Depends on: nothing (stack-agnostic)
-Requirements: 64-bit CPU with atomic support to generate on multi-threads
+Version: `1.0`
 
 ## 1. Purpose
 
