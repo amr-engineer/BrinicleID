@@ -48,15 +48,9 @@ BrinicleID is designed to provide the following properties:
 
 ```
  1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111
- │└┬┘ └┬───────────────────────────────────────────────────┘ └─┬┘ │└──┬─┘└──┬──┘
- │ │   └─ 44-bit Unix timestamp in milliseconds    Resolution ─┘  │   │ Reserved
- │ └─ Key version                           Enable borrow toggle ─┘ Delta size
- └─ ID type
-```
-
-types:
-```
-0 = 32-Bit | 1 = 64-Bit
+ └┬─┘ └┬───────────────────────────────────────────────────┘ └─┬┘ │└──┬─┘└──┬──┘
+  │   └─ 44-bit Unix timestamp in milliseconds    Resolution ─┘  │   │ Reserved
+  └─ Key version                           Enable borrow toggle ─┘ Delta size
 ```
 
 resolution enum:
