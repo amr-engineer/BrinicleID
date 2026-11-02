@@ -12,8 +12,8 @@ Version: `1.0`
 - **Tick Resolution:** The chronometric unit used to measure elapsed time within a session.
 - **Delta:** The elapsed time since the beginning of a session, measured in units of the tick resolution.
 - **Sequence:** An ordinal value, unique within the same delta tick to distinguishing IDs generated withing the same delta tick.
-- **BrinicleKey:** A 64-bit key to represent configurations for the ID generator.
-- **BrinicleID:** A 32-bit identifier bounded to session and generated based on a `BrinicleKey`.
+- **BrinicleID:** A unique 32-bit identifier bounded to session.
+- **BrinicleKey:** A 64-bit value that carries the parameters needed to generate and decode any `BrinicleID`.
 
 ## 3. Guarantees
 
