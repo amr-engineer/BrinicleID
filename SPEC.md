@@ -35,3 +35,29 @@ BrinicleID is designed to provide the following properties:
 - **Adversarial Collision Resistance:**  Identifiers are deterministic and predictable by design.
 
 > Note: Read [README.md](README.md) for info about alternatives.
+
+## 5. Encoding
+
+### BrinicleKey:
+
+64-Bit Layout:
+
+```
+[ 4 version ] [ 44 timestamp ] [ 4 resolution ] [ 1 borrow ] [ 5 delta ] [ 6 reserved ]
+```
+
+```
+ 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111
+ └┬─┘ └┬───────────────────────────────────────────────────┘ └─┬┘ │└──┬─┘└──┬──┘
+  │    └─ 44-bit Unix timestamp in milliseconds    Resolution ─┘  │   │ Reserved
+  └─ Key version                            Enable borrow toggle ─┘ Delta size
+
+```
+
+resolution enum:
+```
+   0 0000 =   1 day |  1 0001 =   1 h   |  2 0010 =   5 min |  3 0011 =   1 min
+   4 0100 =  30 sec |  5 0101 =   5 sec |  6 0110 =   1 sec |  7 0111 = 100 ms
+   8 1000 =  10 ms  |  9 1001 =   1 ms  | 10 1010 = 100 µs  | 11 1011 =  10 µs
+  12 1100 =   1 µs  | 13 1101 = 100 ns  | 14 1110 =  10 ns  | 15 1111 =   1 ns
+```
