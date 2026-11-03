@@ -54,6 +54,12 @@ Layout:
  └─ ID size (32-Bit / 64-Bit)                                        Reserved ─┘
 ```
 
+ID sizes:
+```
+  0 = 32-Bit
+  1 = 64-Bit
+```
+
 resolution enum:
 ```
    0 0000 =   1 day |  1 0001 =   1 h   |  2 0010 =   5 min |  3 0011 =   1 min
