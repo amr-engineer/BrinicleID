@@ -43,13 +43,13 @@ BrinicleID is designed to provide the following properties:
 Layout:
 
 ```
-[ 1 size ] [ 3 version ] [ 44 timestamp ] [ 4 resolution ] [ 10 layout ] [ 1 borrow ] [ 1 reserved ]
+[ 1 size ] [ 3 version ] [ 44 timestamp ] [ 4 resolution ] [ 10 format ] [ 1 borrow ] [ 1 reserved ]
 ```
 
 ```
  1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111
  │└┬┘ └┬───────────────────────────────────────────────────┘ └┬─┘ └─────────┬┘││
- │ │   └─ 44-bit Unix timestamp in milliseconds   Resolution ─┘  ID layout ─┘ ││
+ │ │   └─ 44-bit Unix timestamp in milliseconds   Resolution ─┘     Format ─┘ ││
  │ └─ Key version                                              Enable Borrow ─┘│
  └─ ID size (32-Bit / 64-Bit)                                        Reserved ─┘
 ```
