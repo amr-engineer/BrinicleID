@@ -36,7 +36,7 @@ BrinicleID is designed to provide the following properties:
 
 > Note: Read [README.md](README.md) for info about alternatives.
 
-## 5. Encoding
+## 5. Layout
 
 ### BrinicleKey:
 
