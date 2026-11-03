@@ -48,9 +48,9 @@ Layout:
 
 ```
  1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111
- │└┬┘ └┬───────────────────────────────────────────────────┘ └┬─┘ └─────────┬┘││
- │ │   └─ 44-bit Unix timestamp in milliseconds   Resolution ─┘     Format ─┘ ││
- │ └─ Key version                                              Enable Borrow ─┘│
+ │└┬┘ └┬───────────────────────────────────────────────────┘ └┬─┘ ├┘└───────┬┘││
+ │ │   └─ 44-bit Unix timestamp in milliseconds   Resolution ─┘   │ Format ─┘ ││
+ │ └─ Key version                     Reserved for 64-Bit Format ─┘   Borrow ─┘│
  └─ ID size (32-Bit / 64-Bit)                                        Reserved ─┘
 ```
 
